@@ -2,10 +2,10 @@
 from flask import Flask, render_template, request
 
 # Create an instance of the Flask class for the web application
-app = Flask(__name__)
+main = Flask(__name__)
 
 # Define the main route for the application, which handles both GET and POST requests
-@app.route('/', methods=['GET', 'POST'])
+@main.route('/', methods=['GET', 'POST'])
 def index():
 
     # Initialize a variable to store the processed age value, default is 0
@@ -26,4 +26,4 @@ def index():
 
 # Run the Flask application in debug mode when the script is executed directly
 if __name__ == '__main__':
-  app.run(debug=True)
+  main.run(debug=True)
